@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM nginx:latest
 
 RUN mkdir -p /app
 
@@ -8,6 +8,4 @@ ADD . /app
 
 EXPOSE 22
 
-ENTRYPOINT ["/bin/sh", "-c", "/bin/bash"]
-
-CMD ./run.sh
+CMD run.sh
