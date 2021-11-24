@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tester
+  name: test-cicd
 spec:
   selector:
     matchLabels:
-      app: test
+      app: test-cicd
   replicas: 1
   template:
     metadata:
       labels:
-        app: test
+        app: test-cicd
     spec:
       containers:
-        - name: tester
+        - name: test-cicd
           image: gcr.io/$PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
           resources:
             requests:
