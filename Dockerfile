@@ -9,3 +9,5 @@ ADD . /app
 EXPOSE 22
 
 ENTRYPOINT ["/bin/sh", "-c", "/bin/bash"]
+
+CMD echo hello &
