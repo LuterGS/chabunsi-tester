@@ -6,6 +6,8 @@ WORKDIR /app
 
 ADD . /app
 
-EXPOSE 22
+WORKDIR /etc/nginx
 
-CMD run.sh
+CMD ["nginx", "-g", "daemon off;"]
+
+EXPOSE 80
