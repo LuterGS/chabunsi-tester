@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: test-cicd
-          image: "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
+          image: "gcr.io/neural-guard-332812/tester"
           resources:
             requests:
               cpu: 100m
